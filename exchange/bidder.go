@@ -171,6 +171,9 @@ func (bidder *bidderAdapter) requestBid(ctx context.Context, request *openrtb.Bi
 		}
 	}
 
+	//todo x
+	//seatBid.currency = firstHTTPCallCurrency
+
 	return seatBid, errs
 }
 
