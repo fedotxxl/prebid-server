@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/prebid/prebid-server/adapters/otm"
+	"github.com/prebid/prebid-server/adapters/otmFake"
 	"io/ioutil"
 	"net/http"
 	"path/filepath"
@@ -159,6 +160,7 @@ func newExchangeMap(cfg *config.Configuration) map[string]adapters.Adapter {
 		"adform":          adform.NewAdformAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderAdform)].Endpoint),
 		"sovrn":           sovrn.NewSovrnAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderSovrn)].Endpoint),
 		"otm":             otm.NewOtmAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderOtm)].Endpoint),
+		"otmfake":         otmFake.NewOtmFakeAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderOtmFake)].Endpoint),
 	}
 }
 

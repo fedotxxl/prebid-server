@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Otm fake Adapter Params",
+  "description": "A schema which validates params accepted by the Otm adapter",
+
+  "type": "object",
+  "properties": {
+    "tagId": {
+      "type": "string",
+      "description": "An ID which identifies the otm ad tag"
+    }
+  },
+  "required": ["tagId"]
+}

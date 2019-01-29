@@ -39,6 +39,7 @@ const (
 	BidderSomoaudience BidderName = "somoaudience"
 	BidderSovrn        BidderName = "sovrn"
 	BidderOtm          BidderName = "otm"
+	BidderOtmFake      BidderName = "otmfake"
 	Bidder33Across     BidderName = "33across"
 )
 
@@ -63,6 +64,7 @@ var BidderMap = map[string]BidderName{
 	"somoaudience":    BidderSomoaudience,
 	"sovrn":           BidderSovrn,
 	"otm":             BidderOtm,
+	"otmfake":         BidderOtmFake,
 	"33across":        Bidder33Across,
 }
 

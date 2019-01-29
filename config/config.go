@@ -382,7 +382,9 @@ func SetupViper(v *viper.Viper, filename string) {
 	v.SetDefault("adapters.33across.endpoint", "http://ssc.33across.com/api/v1/hb")
 	v.SetDefault("adapters.rhythmone.endpoint", "http://tag.1rx.io/rmp")
 	v.SetDefault("adapters.rhythmone.usersync_url", "//sync.1rx.io/usersync2/rmphb?gdpr={{gdpr}}&gdpr_consent={{gdpr_consent}}&redir=")
-	v.SetDefault("adapters.otm.endpoint", "https://ssp.otm-r.com/postjson") //http://www.mocky.io/v2/5c4070e30f0000b30fe7b4a6
+	v.SetDefault("adapters.otmfake.endpoint", "http://www.mocky.io/v2/5c49b4bf3200004b000b5a19")
+	//v.SetDefault("adapters.otmfake.endpoint", "http://www.mocky.io/v2/5c49b484320000f9300b5a14")
+	v.SetDefault("adapters.otm.endpoint", "https://ssp.otm-r.com/postjson")
 
 	v.SetDefault("max_request_size", 1024*256)
 	v.SetDefault("analytics.file.filename", "")
