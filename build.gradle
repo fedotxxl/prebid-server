@@ -1,0 +1,37 @@
+plugins {
+    id "nebula.ospackage" version "3.4.0"
+}
+
+apply plugin: "nebula.deb"
+apply plugin: "nebula.rpm"
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+project.ext {
+    applicationName = "alfadart-prebid-server"
+}
+
+task rpm(type: Rpm) {
+    packageName = project.ext.applicationName
+    version = project.version
+    arch = NOARCH
+    os = LINUX
+
+    into "/"
+
+    from("prebid-server") {
+        into "/opt/alfadart-prebid-server/"
+    }
+
+    from("static") {
+        into "/opt/alfadart-prebid-server/static/"
+    }
+
+    from("stored_requests/data") {
+        into "/opt/alfadart-prebid-server/stored_requests/data/"
+    }
+}

@@ -11,5 +11,5 @@ import (
 func NewOtmSyncer(cfg *config.Configuration) usersync.Usersyncer {
 	redirectURI := url.QueryEscape(cfg.ExternalURL) + "%2Fsetuid%3Fbidder%3Dotm%26uid%3D%24%7BUSER_ID%7D"
 	usersyncURL := "//pix.ssp.otm-r.com/match?callback_url="
-	return adapters.NewSyncer("otm", 32, adapters.ResolveMacros(usersyncURL+redirectURI), adapters.SyncTypeRedirect)
+	return adapters.NewSyncer("otm", 48, adapters.ResolveMacros(usersyncURL+redirectURI), adapters.SyncTypeRedirect)
 }
