@@ -14,6 +14,7 @@ import (
 	"github.com/prebid/prebid-server/adapters/ix"
 	"github.com/prebid/prebid-server/adapters/lifestreet"
 	"github.com/prebid/prebid-server/adapters/openx"
+	"github.com/prebid/prebid-server/adapters/otm"
 	"github.com/prebid/prebid-server/adapters/pubmatic"
 	"github.com/prebid/prebid-server/adapters/pulsepoint"
 	"github.com/prebid/prebid-server/adapters/rhythmone"
@@ -49,5 +50,6 @@ func NewSyncerMap(cfg *config.Configuration) map[openrtb_ext.BidderName]usersync
 		openrtb_ext.BidderSomoaudience: somoaudience.NewSomoaudienceSyncer(cfg),
 		openrtb_ext.BidderSovrn:        sovrn.NewSovrnSyncer(cfg),
 		openrtb_ext.Bidder33Across:     ttx.New33AcrossSyncer(cfg),
+		openrtb_ext.BidderOtm:          otm.NewOtmSyncer(cfg),
 	}
 }
