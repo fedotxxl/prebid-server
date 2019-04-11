@@ -5,7 +5,7 @@ plugins {
 apply plugin: "nebula.deb"
 apply plugin: "nebula.rpm"
 
-version = '1.1'
+version = '1.2'
 
 repositories {
     mavenCentral()
@@ -15,6 +15,8 @@ project.ext {
     applicationName = "alfadart-prebid-server"
 }
 
+//before run:
+//go build .
 task rpm(type: Rpm) {
     packageName = project.ext.applicationName
     version = project.version

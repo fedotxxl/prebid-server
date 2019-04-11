@@ -10,7 +10,6 @@ import (
 	"github.com/prebid/prebid-server/openrtb_ext"
 	"github.com/prebid/prebid-server/pbs"
 	"net/http"
-	"net/url"
 	"strconv"
 )
 
@@ -257,14 +256,14 @@ func (s *OtmAdapter) MakeBids(internalRequest *openrtb.BidRequest, externalReque
 	for _, sb := range bidResp.SeatBid {
 		for i := 0; i < len(sb.Bid); i++ {
 			bid := sb.Bid[i]
-			adm, err := url.QueryUnescape(bid.AdM)
-			if err == nil {
-				bid.AdM = adm
-				bidResponse.Bids = append(bidResponse.Bids, &adapters.TypedBid{
-					Bid:     &bid,
-					BidType: openrtb_ext.BidTypeBanner,
-				})
-			}
+			//adm, err := url.QueryUnescape(bid.AdM)
+			//if err == nil {
+			//	bid.AdM = bid.AdM
+			bidResponse.Bids = append(bidResponse.Bids, &adapters.TypedBid{
+				Bid:     &bid,
+				BidType: openrtb_ext.BidTypeBanner,
+			})
+			//}
 		}
 	}
 
