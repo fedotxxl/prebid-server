@@ -256,6 +256,11 @@ func (s *OtmAdapter) MakeBids(internalRequest *openrtb.BidRequest, externalReque
 	for _, sb := range bidResp.SeatBid {
 		for i := 0; i < len(sb.Bid); i++ {
 			bid := sb.Bid[i]
+
+			if len(bid.CrID) == 0 {
+				bid.CrID = "creative-id-is-not-specified"
+			}
+
 			//adm, err := url.QueryUnescape(bid.AdM)
 			//if err == nil {
 			//	bid.AdM = bid.AdM
