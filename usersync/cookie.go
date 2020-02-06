@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"regexp"
+	"strconv"
 	"time"
 
 	"github.com/prebid/prebid-server/config"
@@ -155,6 +157,21 @@ func (cookie *PBSCookie) SetCookieOnResponse(w http.ResponseWriter, domain strin
 	http.SetCookie(w, httpCookie)
 }
 
+func (cookie *PBSCookie) SetCookieOnResponseSameSiteNone(w http.ResponseWriter, domain string, ttl time.Duration, userAgent string) {
+	httpCookie := cookie.ToHTTPCookie(ttl)
+
+	if domain != "" {
+		httpCookie.Domain = domain
+	}
+
+	if shouldSendSameSiteNone(userAgent) {
+		httpCookie.Secure = true
+		w.Header().Add("Set-Cookie", httpCookie.String() + "; SameSite=None")
+	} else {
+		http.SetCookie(w, httpCookie)
+	}
+}
+
 // Unsync removes the user's ID for the given family from this cookie.
 func (cookie *PBSCookie) Unsync(familyName string) {
 	delete(cookie.uids, familyName)
@@ -280,4 +297,21 @@ func getExpiry(familyName string) time.Time {
 func timestamp() *time.Time {
 	birthday := time.Now()
 	return &birthday
+}
+
+func shouldSendSameSiteNone(userAgent string) bool {
+	pattern := regexp.MustCompile("Chrom[^ /]+/(\\d+)[.\\d]*")
+	match := pattern.FindStringSubmatch(userAgent)
+
+	if len(match) > 0 {
+		chromeVersion, err := strconv.Atoi(match[1])
+
+		if err == nil {
+			if chromeVersion >= 80 {
+				return true
+			}
+		}
+	}
+
+	return false
 }

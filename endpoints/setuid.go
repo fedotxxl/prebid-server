@@ -76,7 +76,7 @@ func NewSetUIDEndpoint(cfg config.HostCookie, perms gdpr.Permissions, pbsanalyti
 			so.Success = true
 		}
 
-		pc.SetCookieOnResponse(w, cfg.Domain, cookieTTL)
+		pc.SetCookieOnResponseSameSiteNone(w, cfg.Domain, cookieTTL, r.UserAgent())
 	})
 }
 
