@@ -9,6 +9,7 @@ _test
 .cover/
 .idea/
 .vscode/
+.gradle/
 
 # Architecture specific extensions/prefixes
 *.[568vq]

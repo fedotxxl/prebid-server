@@ -2,6 +2,7 @@ package exchange
 
 import (
 	"github.com/prebid/prebid-server/adapters/otm"
+	"github.com/prebid/prebid-server/adapters/otmDev"
 	"net/http"
 	"strings"
 
@@ -54,6 +55,7 @@ func newAdapterMap(client *http.Client, cfg *config.Configuration, infos adapter
 		openrtb_ext.BidderSomoaudience: somoaudience.NewSomoaudienceBidder(cfg.Adapters[string(openrtb_ext.BidderSomoaudience)].Endpoint),
 		openrtb_ext.BidderSovrn:        sovrn.NewSovrnBidder(client, cfg.Adapters[string(openrtb_ext.BidderSovrn)].Endpoint),
 		openrtb_ext.BidderOtm:          otm.NewOtmBidder(client, cfg.Adapters[string(openrtb_ext.BidderOtm)].Endpoint),
+		openrtb_ext.BidderOtmDev:       otmDev.NewOtmDevBidder(client, cfg.Adapters[string(openrtb_ext.BidderOtmDev)].Endpoint),
 		openrtb_ext.Bidder33Across:     ttx.New33AcrossBidder(cfg.Adapters[string(openrtb_ext.Bidder33Across)].Endpoint),
 	}
 

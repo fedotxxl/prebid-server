@@ -1,0 +1,115 @@
+{
+  "mockBidRequest": {
+    "id": "some_test_ad",
+    "site": {
+      "page": "https://test.opposingviews.com/i/society/republican-sen-collins-may-change-vote-tax-bill?cb=1234534"
+    },
+    "imp": [
+      {
+        "bidfloor": 0.02,
+        "banner": {
+          "format": [
+            {
+              "w": 300,
+              "h": 250
+            }
+          ]
+        },
+        "ext": {
+          "bidder": {
+            "bidfloor": 0.02,
+            "appId": "3b16770b-17af-4d22-daff-9606bdf2c9c3"
+          }
+        }
+      }
+    ]
+  },
+  "httpCalls": [
+    {
+      "expectedRequest": {
+        "uri": "",
+        "body": {
+          "id": "some_test_ad",
+          "imp": [
+            {
+              "banner": {
+                "format": [
+                  {
+                    "h": 250,
+                    "w": 300
+                  }
+                ]
+              },
+              "bidfloor": 0.02,
+              "ext": {
+                "bidder": {
+                  "appId": "3b16770b-17af-4d22-daff-9606bdf2c9c3",
+                  "bidfloor": 0.02
+                }
+              },
+              "id": ""
+            }
+          ],
+          "site": {
+            "page": "https://test.opposingviews.com/i/society/republican-sen-collins-may-change-vote-tax-bill?cb=1234534"
+          },
+          "user": {
+          }
+        }
+      },
+      "mockResponse": {
+        "status": 200,
+        "body": {
+          "id": "c90d039e-b728-408a-bed4-10dc9d68b933",
+          "bidid": "888050bb-20d7-4240-825b-21b6211aa88d",
+          "cur": "RUB",
+          "seatbid": [
+            {
+              "bid": [
+                {
+                  "id": "2D3D314197ADC7C1C95DF6B1DAF6166B",
+                  "impid": "inArticle1",
+                  "price": 21,
+                  "adid": "5caf04ba7bc72f51a8998c6a",
+                  "adm": "\u003cscript\u003evar gsw\u003dfunction(){return Number(screen.width)\u003d\u003d\u003dscreen.width\u0026\u0026screen.width%1\u003d\u003d\u003d0\u0026\u0026screen.width\u003e0\u0026\u0026screen.width\u003c2147483647?screen.width:null;};var gsh\u003dfunction(){return Number(screen.height)\u003d\u003d\u003dscreen.height\u0026\u0026screen.height%1\u003d\u003d\u003d0\u0026\u0026screen.height\u003e0\u0026\u0026screen.height\u003c2147483647?screen.height:null;};var gln\u003dfunction(){return navigator?(navigator.language||navigator.browserLanguage||\u0027\u0027):\u0027\u0027;};var iegp\u003d\u0027\u0027;try{iegp\u003d\u0027\u0026lng\u003d\u0027+gln()+\u0027\u0026sw\u003d\u0027+gsw()+\u0027\u0026sh\u003d\u0027+gsh()+\u0027\u0026r2\u003d\u0027;}catch(ex){};(new Image()).src\u003d\u0027https://dsa.hybrid.ai/DeliverySeance/SaveImpression2?sid\u003d_cRNvFqhYl1eLABHKKTyXXzA7uD2jmUmSCPakgbDnXErow9M2RWBjwLp9Le0QKG.x\u0026adid\u003d_wzdkaAz6uRYsxKobkxf6AsDDIyxWShIx7t7X_zrhrgAeIc5Be7OuO13Hey35ZmhC\u0026p\u003d21\u0026r\u003d\u0027+iegp;\u003c/script\u003e\u003cspan style\u003d\u0027display:inline-block;line-height:0px;vertical-align:bottom;\u0027\u003e\u003cscript id\u003d\u0027tx_script_xqfuvuadsl\u0027 type\u003d\u0027text/javascript\u0027\u003evar s\u003ddocument.createElement(\u0027script\u0027);s.type\u003d\u0027text/javascript\u0027;s.async\u003dtrue;s.src\u003d\u0027https://st.hybrid.ai/dsp.js\u0027;var cdf\u003dfunction(){var p\u003d{op:{fu:\u0027https://dsa.hybrid.ai/Ad/Load?srve\u003d_TSCIpMVE12Dd0k.odUyxlhujrQlWd.1.4JSQq1tZNqPPkAIGmCARAOqBlCiu_NLhnXcgFJczgEDpuXHSOB_pBXkGEvxANegJ7a8MladMY0jBHQ08y0f1TcGPLlILB89tZAczH5QONovgLzTb_TJVR6uhVLCGieV_eZa.UW7G_.WZ7xs.Nfh31n.OnAlJPxawhiIX.OosPLr6Rfc5ZNuUK.ElrkdlyoCrM5Okm3HLrozxEAgx1nE2ydC8nNEW1PlkepDmMlyT9wpv2A1GbwVbazo_Bwu_0uXFdnUivtDVumn80d3rlIxBM2JvRL0NcIy0\u0026ctu\u003d\u0027,w:\u0027300\u0027,h:\u0027250\u0027}};var ct\u003d\u0027\u0027;var vu\u003d[\u0027https://dsa.hybrid.ai/DeliverySeance/SaveView2?sid\u003d_cRNvFqhYl1eLABHKKTyXXzA7uD2jmUmSCPakgbDnXErow9M2RWBjwLp9Le0QKG.x\u0026r\u003d\u0027];_tx.load2(\u0027xqfuvuadsl\u0027,p,ct,vu);};if(s.addEventListener){s.addEventListener(\u0027load\u0027,cdf,false);}else if(s.readyState){s.onreadystatechange\u003dcdf;}else if(s.attachEvent){s.attachEvent(\u0027onload\u0027,cdf);}(document.getElementsByTagName(\u0027head\u0027)[0] || document.getElementsByTagName(\u0027body\u0027)[0]).appendChild(s);\u003c/script\u003e\u003c/span\u003e\u003cimg style\u003d\"display:none\" src\u003d\"https://pix.ssp.otm-r.com/imp?id\u003dc90d039e-b728-408a-bed4-10dc9d68b933\u0026bidid\u003d2\u0026impid\u003dinArticle1\u0026adid\u003d5caf04ba7bc72f51a8998c6a\u0026nurl\u003daHR0cHM6Ly9kc2EuaHlicmlkLmFpL29wZW5ydGIvd2luMi8xMzcvP3I9MjQyOTk0ODU0NDAwMjY1OSZzaWQ9X2NSTnZGcWhZbDFlTEFCSEtLVHlYWHpBN3VEMmptVW1TQ1Bha2diRG5YRXJvdzlNMlJXQmp3THA5TGUwUUtHLngmcD0yMQ\u003d\u003d\u0026randsalt\u003d369800\u0026impression\u003dAAAAAPSATvJhdgACAoVTz4_bRBR2HlEOsBIVKid6sCJUbaW1PTP-Oa1WWycujUiCStpVF4RUjWfGyew6tus4m91FHLgiLhyQOHDgz-DAAa78BVy4cOSEEAdUIS3eZFMlEhVvpPfe997Ms7_3ZqDHKRLIptKIfRIYDgqYEUvhGBgJToUXxNS2b6osLCvFU4m__fPvn9_47fsffvzp45aaFlotcAsjahKXmMQ2CfHgRWOYX6g0ZZZrIn13oLL52T09zESZK6H7JjbJPX0kxVTpztEdPSyKVD6VcV9Vlmv7pu3pu_3ek-FgT0_VidQfSn6S39G7kzKfSssnJqq3EM_EBOvDPFap1B-zhJXq-jQAhaYXQIs4NvzShL9eAw1uAEBP0ITEXkANngQ1VxYII8YUGTgRdcSTzE8w3IxLJZP03Czn9bm3Snn6bDZhpayJLte1wA5GBAU-NEeHsDPMZzxfQNMJ4HUcmL5bbwAEV5po8E_j0_apkgtW_6yqztt32xih9l57PK1dOS3q0F6bjfEWsjdQwcaSs2orTzbzZS7mvJpthMbJS_AZ7PTOa1YCboRpwiJWVvDJrJrHxniuhEGDxJHUT2rH5oYTx1d3gRODYsa5II6HhQ3X7JHLWYKcmPkx90niYhZQGnCPQav7aAi7aV7K7MKYZYyfLPIyFVddbI0OO-sCO1leTllaey8uLy_fXOlVToNGvZa9XaKXnV7bbxqTqipmdy2L51kls8qcLGmZTFkrghYKrcivdeR3o07UJRGyMXWI20HIjlz7QRgQzw7M40KO4QtYlxMztlEqL2RWVrG1UBmxsO1bB-U-cQilTuA6DkLEc-ntmRL7z_jog9P3nk8-SrEchJ1ev__k_OjoIvTnETmeHk4fdx-xk3EcZUcPynxBh2T0tHO8GBR0INGH_Yfm2e1in2DQ3rF-fbf1-dcHa_v2l-__3nS--l-sbYl7f9u-Sl6d_-_6fxxosB4DNDbn0VhqWIWKsFbfdTStHuEqdv0oltlGY-M7W0_sVodlmSx1G6Ez4iJN-xc\u003d\"/\u003e\u003cscript type\u003d\"text/javascript\" src\u003d\"https://pix.ssp.otm-r.com/sspmatch-js?randsalt\u003d369800\"\u003e\u003c/script\u003e\u003cnoscript\u003e\u003cimg style\u003d\"display:none\" src\u003d\"https://pix.ssp.otm-r.com/sspmatch?randsalt\u003d369800\"\u003e\u003c/noscript\u003e",
+                  "adomain": [
+                    "lorenz-snackworld.ru"
+                  ],
+                  "iurl": "https://content.hybrid.ai/Hybrid/0A/D7/0AD7CDBDC2D0319425B003D53EA82638.jpeg",
+                  "cid": "5caf04b57bc72f51a8998a8d",
+                  "crid": "5caf04ba7bc72f51a8998c6a",
+                  "cat": [
+                    "IAB8"
+                  ],
+                  "w": 300,
+                  "h": 250,
+                  "ext": {
+                    "dspPrice": "21",
+                    "tierId": -1,
+                    "privateAuction": false
+                  }
+                }
+              ],
+              "seat": "2",
+              "group": 0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "expectedBids": [
+    {
+      "bid": {
+        "id": "12345678",
+        "impid": "test-slot",
+        "price": 2,
+        "adm": "\u003cdiv id=\"12345678\" style=\"width:300;height:250;background-color:black;color:white;\"\u003e300x250\u003c\\div\u003e",
+        "crid": "crid_1",
+        "w": 300,
+        "h": 250
+      },
+      "type": "banner"
+    }
+  ]
+}
