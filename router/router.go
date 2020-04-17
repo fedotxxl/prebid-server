@@ -160,7 +160,7 @@ func newExchangeMap(cfg *config.Configuration) map[string]adapters.Adapter {
 		"adform":          adform.NewAdformAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderAdform)].Endpoint),
 		"sovrn":           sovrn.NewSovrnAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderSovrn)].Endpoint),
 		"otm":             otm.NewOtmAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderOtm)].Endpoint),
-		"otmDev":          otmDev.NewOtmDevAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[string(openrtb_ext.BidderOtmDev)].Endpoint),
+		"otmDev":          otmDev.NewOtmDevAdapter(adapters.DefaultHTTPAdapterConfig, cfg.Adapters[strings.ToLower(string(openrtb_ext.BidderOtmDev))].Endpoint),
 	}
 }
 

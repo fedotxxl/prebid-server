@@ -15,9 +15,12 @@ project.ext {
     applicationName = "alfadart-prebid-server"
 }
 
-//before run:
-//go build .
-task rpm(type: Rpm) {
+task buildProd(type: Exec) {
+    workingDir "./"
+    commandLine "go", "build", "."
+}
+
+task rpm(type: Rpm, dependsOn: [":buildProd"]) {
     packageName = project.ext.applicationName
     version = project.version
     arch = NOARCH
