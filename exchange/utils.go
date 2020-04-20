@@ -169,10 +169,6 @@ func sanitizedImpCopy(imp *openrtb.Imp, ext map[string]json.RawMessage, intended
 // In this function, "givenBidder" may or may not be an alias. "coreBidder" must *not* be an alias.
 // It returns true if a Cookie User Sync existed, and false otherwise.
 func prepareUser(req *openrtb.BidRequest, givenBidder string, coreBidder openrtb_ext.BidderName, explicitBuyerUIDs map[string]string, usersyncs IdFetcher) bool {
-	if coreBidder == "otmDev" {
-		coreBidder = "otm"
-	}
-
 	cookieId, hadCookie := usersyncs.GetId(coreBidder)
 
 	if id, ok := explicitBuyerUIDs[givenBidder]; ok {
