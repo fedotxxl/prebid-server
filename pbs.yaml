@@ -1,0 +1,14 @@
+external_url: http://pbs.alfasense.com
+
+http_client:
+  max_idle_connections_per_host: 50
+
+host_cookie:
+  cookie_name: alfasense-user-id
+
+adapters:
+  otm:
+    #endpoint: http://pbs.alfasense.com/otm-proxy/postjson
+    endpoint: https://ssp.otm-r.com/postjson
+  otmDev:
+    endpoint: http://ad-eu.p.otm-r.com/ortb/alfasense
