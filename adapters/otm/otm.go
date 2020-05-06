@@ -186,11 +186,6 @@ func (s *OtmAdapter) MakeRequests(request *openrtb.BidRequest) ([]*adapters.Requ
 		request.User = new(openrtb.User)
 	}
 
-	if request.User.BuyerUID != "" {
-		request.User.ID = request.User.BuyerUID
-		request.User.BuyerUID = ""
-	}
-
 	reqJSON, err := json.Marshal(request)
 	if err != nil {
 		errs = append(errs, err)

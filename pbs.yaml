@@ -9,6 +9,6 @@ host_cookie:
 adapters:
   otm:
     #endpoint: http://pbs.alfasense.com/otm-proxy/postjson
-    endpoint: https://ssp.otm-r.com/postjson
+    endpoint: http://ad-eu.p.otm-r.com/ortb/alfasense
   otmDev:
     endpoint: http://ad-eu.p.otm-r.com/ortb/alfasense
